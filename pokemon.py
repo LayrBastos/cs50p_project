@@ -1,27 +1,32 @@
-import pytest
-from project import height, weight, select_level
+class Pokemon:
+    def __init__(self, name, color, height, weight, type_):
+        self.name = name.capitalize()
+        self.color = color
+        self.color_revealed = False
+        self.height = height
+        self.weight = weight
+        self.type_ = type_
+        self.type_revealed = False
+
+    def check_guess(self, other):
+        return self.name == other.name
+
+    def is_taller_than(self, other):
+        return self.height > other.height
+
+    def is_heavier_than(self, other):
+        return self.weight > other.weight
+
+    def compare_types(self, other):
+        if self.type_ == other.type_:
+            print(f"I'm not {other.name}, but we are from the same pokemon type...\nYou're getting closer!!\n")
+            self.type_revealed = True
+
+    def compare_colors(self, other):
+        if self.color == other.color:
+            print(f"Me and {other.name} have the same color... I'd say we are kinda {self.color}")
+            self.color_revealed = True
 
 
-def test_select_level():
-    assert select_level(1) == 20
-    assert select_level(2) == 10
 
 
-def test_weight_string_input():
-    with pytest.raises(TypeError):
-        weight('heavy')
-
-
-def test_height_string_unput():
-    with pytest.raises(TypeError):
-        height('tall')
-
-
-def test_weight_correct_inputs():
-    assert weight(346) == '34.6kg'
-    assert weight(4600) == '460.0kg'
-
-
-def test_height_correct_inputs():
-    assert height(15) == '1.5m'
-    assert height(3) == '30cm'

@@ -105,7 +105,7 @@ def main():
                 hidden.compare_types(pkmn)
             if not hidden.color_revealed:
                 hidden.compare_colors(pkmn)
-    print(f"You've lost... I'm {hidden.name}")
+    sys.exit(f"You've lost... I'm {hidden.name}")
 
 
 if __name__ == "__main__":
