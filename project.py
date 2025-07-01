@@ -16,7 +16,7 @@ def select_level(n):
         return 20
     elif n == 2:
         return 10
-
+    
 
 def height(h):
     """Converts the Pokémon's height to meters or centimeters (if less than 1 m)
@@ -48,23 +48,22 @@ def weight(w):
 
 def main():
     pokemon_id = random.randint(1, 150)
-    pk = pb.pokemon(pokemon_id)
-    species = pb.pokemon_species(pokemon_id)
-
+    pk = pb.pokemon('pikachu') # substitute 'pokemon_id' for 'pikachu' when recording the presentation video
+    species = pb.pokemon_species('pikachu') # substitute 'pokemon_id' for 'pikachu' when recording the presentation video
     hidden = Pokemon(pk.name,
                      species.color.name,
                      pk.height,
                      pk.weight,
                      pk.types[0].type.name)
-
+    # Level Selection
     while True:
         level = input("Select level:\n(1) - Easy\n(2) - Hard\n>>> ")
-        try:
+        if level in ('1', '2'):
             level = int(level)
             break
-        except ValueError:
+        else:
             print("Invalid Input.")
-
+        
     guesses = 0
     max_guesses = select_level(level)
 
@@ -86,7 +85,7 @@ def main():
             continue
         else:
             guesses += 1
-
+            
         if hidden.check_guess(pkmn):
             print(f"You're right!! I am {pkmn.name}!!!")
             print(f"You found me with {guesses} guesses")
@@ -105,7 +104,9 @@ def main():
                 hidden.compare_types(pkmn)
             if not hidden.color_revealed:
                 hidden.compare_colors(pkmn)
-    sys.exit(f"You've lost... I'm {hidden.name}")
+    
+    print(f"You lost... I'm {hidden.name}")
+    sys.exit("Thanks for playing!!! :)")
 
 
 if __name__ == "__main__":

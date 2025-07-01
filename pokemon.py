@@ -26,7 +26,4 @@ class Pokemon:
         if self.color == other.color:
             print(f"Me and {other.name} have the same color... I'd say we are kinda {self.color}")
             self.color_revealed = True
-
-
-
-
+            
