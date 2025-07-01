@@ -3,6 +3,7 @@ CS50p Final Project for obtainment of Harvard's CS50p Certificate.
 
 # Prerequisites:
 - pokebase
+
 `pip install pokebase`
 
 ## How the game works:
