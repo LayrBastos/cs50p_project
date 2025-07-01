@@ -15,3 +15,5 @@ After making a guess, the hidden Pokémon will compare it's height and weight wi
 If the guessed Pokémon and the hidden one share the same Pokémon type, this information will be given as a hint. The same applies to the case when both Pokémons have the same main colour.
 
 The game ends with a victory if the player discovers **WHO'S THAT POKÉMON** or with a game over if the player reaches the maximum number of guesses based on the chosen level.
+
+## Vídeo Demo: <https://youtu.be/9VCx4lmRiy0>
