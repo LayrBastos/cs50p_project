@@ -57,8 +57,8 @@ def main():
     play_game = True
     while play_game:
         pokemon_id = random.randint(1, 150)
-        pk = pb.pokemon('pikachu') # substitute 'pokemon_id' for 'pikachu' when recording the presentation video
-        species = pb.pokemon_species('pikachu') # substitute 'pokemon_id' for 'pikachu' when recording the presentation video
+        pk = pb.pokemon(pokemon_id)
+        species = pb.pokemon_species(pokemon_id)
         hidden = Pokemon(pk.name,
                          species.color.name,
                          pk.height,
