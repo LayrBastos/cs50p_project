@@ -1,6 +1,10 @@
 # Who's that Pokémon?! -  Guessing Game
 CS50p Final Project for obtainment of Harvard's CS50p Certificate.
 
+# Prerequisites:
+- pokebase
+`pip install pokebase`
+
 ## How the game works:
 This is a guessing game in which the player must discover who is the misterious Pokémon based on the given hints.
 
