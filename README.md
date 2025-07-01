@@ -16,4 +16,7 @@ If the guessed Pokémon and the hidden one share the same Pokémon type, this in
 
 The game ends with a victory if the player discovers **WHO'S THAT POKÉMON** or with a game over if the player reaches the maximum number of guesses based on the chosen level.
 
+# project.py
+`select_level(n)` returns the number of max guesses the user will have according to the difficulty option chosen (1 for easy or 2 for hard)
+
 ## Vídeo Demo: <https://youtu.be/9VCx4lmRiy0>
